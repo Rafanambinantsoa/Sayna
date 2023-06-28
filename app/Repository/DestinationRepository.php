@@ -7,7 +7,7 @@ use Faker\Factory as Faker;
 
 class DestinationRepository {
 
-    public static function getById($id){
+    public static function generate($id){
 
         $generator = Faker::create();
         $generator->seed($id);
@@ -16,7 +16,7 @@ class DestinationRepository {
         $destination->countryName = $generator->country() ;
         $destination->conjonction = "en" ;
         $destination->computerName = $generator->slug() ;
-        print($destination);
+        return ($destination);
         // return new Destination($id , $generator->country() , 'en' , $generator->slug());
     }
 

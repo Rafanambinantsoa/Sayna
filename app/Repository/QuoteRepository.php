@@ -2,22 +2,22 @@
 
 namespace App\Repository ;
 
-use App\Models\Destination;
+use App\Models\Quote;
 use Faker\Factory as Faker;
 
-class DestinationRepository {
+class QuoteRepository {
 
-    public static function generate($id){
+    public static function generate($id , $siteId , $destinationId){
 
         $generator = Faker::create();
         $generator->seed($id);
-        $destination = new Destination();
-        $destination->id = $id;
-        $destination->countryName = $generator->country() ;
-        $destination->conjonction = "en" ;
-        $destination->computerName = $generator->slug() ;
-        print($destination);
-        // return new Destination($id , $generator->country() , 'en' , $generator->slug());
+        $quote = new Quote();
+        $quote->id = $id;
+        $quote->siteId = $siteId;
+        $quote->destinationId = $destinationId ;
+        $quote->dateQuoted = today() ;
+        return ($quote);
+        // return new quote($id , $generator->country() , 'en' , $generator->slug());
     }
 
 }
