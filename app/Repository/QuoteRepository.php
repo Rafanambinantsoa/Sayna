@@ -17,7 +17,6 @@ class QuoteRepository {
         $quote->destinationId = $destinationId ;
         $quote->dateQuoted = today() ;
         return ($quote);
-        // return new quote($id , $generator->country() , 'en' , $generator->slug());
     }
 
 }

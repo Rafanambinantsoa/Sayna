@@ -15,7 +15,6 @@ class SiteRepository {
         $site->id = $id;
         $site->url = $generator->url();
         return($site);
-        // return new site($id , $generator->country() , 'en' , $generator->slug());
     }
 
 }

@@ -17,7 +17,6 @@ class UserRepository {
         $user->firstname   = $generator->name() ;
         $user->email = $generator->email() ;
         return($user);
-        // return new user($id , $generator->country() , 'en' , $generator->slug());
     }
 
 }

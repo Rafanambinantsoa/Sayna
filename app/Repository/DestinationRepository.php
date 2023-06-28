@@ -17,7 +17,6 @@ class DestinationRepository {
         $destination->conjonction = "en" ;
         $destination->computerName = $generator->slug() ;
         return ($destination);
-        // return new Destination($id , $generator->country() , 'en' , $generator->slug());
     }
 
 }
