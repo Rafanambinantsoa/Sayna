@@ -9,6 +9,12 @@ Dans le cadre de l'amélioration de l'implémentation existante, j'ai travaillé
 Pour démarrer le projet, il vous suffit d'exécuter la commande suivante dans votre terminal :
 
 ```
+composer install
+```
+
+puis , 
+
+```
 php artisan app:result
 ```
 
